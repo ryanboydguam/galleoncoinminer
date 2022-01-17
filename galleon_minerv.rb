@@ -85,7 +85,7 @@ def create_mining_file(mining_address)
   out_file.puts("
     :loop
 
-    wildrig.exe -a sha256csm -o stratum+tcp://stratum.galleoncoin.club:4690 -u #{mining_address}.ryan -p c=GALE --multiple-instance
+    wildrig.exe -a sha256csm -o stratum+tcp://stratum.galleoncoin.club:4690 -u #{mining_address}.ryan -p c=GALE --multiple-instance --opencl-launch 30
 
     if ERRORLEVEL 1000 goto custom
     timeout /t 5
